@@ -1,0 +1,225 @@
+/*Global styles
+--------------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body {
+    color: #2e2d2d;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.25;
+}
+img {
+    width:250px;
+    padding-bottom: 15px;
+}
+a {
+   color: #557dc9; 
+}
+a:hover {
+    color: rgb(251, 252, 253); 
+ }
+ h2 {
+     margin: 20px 0;
+ }
+ .content-wrap {
+    width: 900px;
+    margin: auto;
+    padding: 40px 0;
+ }
+ div.content-wrap {
+     width: 90%;
+
+ }
+
+ /*Navigation
+--------------------------------------------*/
+nav ul {
+    list-style: none; /* remove bullets */
+    padding: 0px;
+    margin: 7px 0px;
+}
+nav a {
+    text-decoration: none; /* remove underline */
+    color: #fff; /* change color */
+    padding: 13px 104px; /*add space around text*/
+    background-color: #4d974d;
+    font: bold 12px/18px sans-serif;
+    border-radius: 0px;
+    margin: -2px;
+}
+nav ul li {
+    display: inline; /* display in one line */
+    position: relative;     
+}
+nav a:hover {
+  background-color: #356b35;
+  border-left: 7px solid #e69514;
+}
+
+nav ul li ul {
+    /* display: none; DON'T DO THIS!! NOT ACCESIBLE */
+    left: -999999px; /* Place submenu off screen */
+    position: absolute; /* position absolutely underneath menu items */
+    top: 1.5em; /*move submenu below main nav*/
+    padding: 0px; /*move submenu horizontally below main nav*/
+    width: 200%; 
+}
+nav ul li ul a {
+  background-color: #59a759;
+  width: 28em; /*change submenu link width */
+  display:block;
+}
+nav li:hover ul {
+    left: 0px; /* Bring back sub-menu on screen...was -999999px*/
+    width: 28em;
+}
+nav ul li ul a:hover {
+  background-color: #356b35; /*background color grey on hover*/
+}
+
+/*Profile
+--------------------------------------------*/
+h1 {
+    text-transform: uppercase;
+    background-color: #3c4b9e;
+    color: #f3f2f2;
+    padding: 18px 20px 18px 55px;
+    font-family: Cambria,'Times New Roman', serif;
+    font-size: 34px;
+    letter-spacing: 30px;
+    line-height: 1.25;
+    border-bottom: 6px solid #9833b1;
+    margin-bottom: 0px;
+    text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 30px #fff,0 0 40px #0059ff,0 0 70px #0059ff,0 0 80px #0059ff,
+0 0 100px #ff00de,
+0 0 150px #ff00de;
+}
+h3 {
+   margin-top: 40px; 
+}
+.visualAlchemist {
+    padding-top: 40px;
+}
+header {
+    background-color: #3c4b9e;
+    color: #b4b4b6;
+    font-size: 18px;
+}
+
+/*Projects
+--------------------------------------------*/
+.projects {
+    background: #c5cad4;
+}
+/*.projects a {
+}   */
+.projects .btn {
+    color: #6a90d8;
+    background: #182f58;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 7px;
+    display: inline-block;
+}
+.projects .btn:hover {
+    background: rgba(107, 106, 106,85%);
+    color: rgb(253, 252, 251);
+}
+.projects-item {
+    overflow: hidden;
+    border-bottom: 1px solid #9833b1;
+    padding: 25px 0; 
+}
+
+.projects-item h3{
+    margin-top: -4px;
+}
+
+/*Work Experience
+--------------------------------------------*/
+.workExperience {
+    margin-top: -41px;
+    background: #90abca;
+    border-top: 3px solid #314ea5;
+}
+
+.jobTitle {
+    display: grid;
+    padding-left: 55px;
+    background-color: #b0c2d6;
+    grid-template-columns: 1fr 2.5fr;
+    column-gap: 0px;
+    border-top: 1px solid #314ea5;
+    column-gap: 0px
+}
+.jobSummary {
+    display: grid;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-top: 40px;
+    background-color: #bbc7d8;
+    border-left: 1px solid #314ea5;  
+}
+
+/*Education
+--------------------------------------------*/
+.education {
+    background-color: #4958b1;
+    border-top: 1px solid #314ea5;
+    color: #bebebe;
+    padding-bottom: 40px;
+}
+
+/*Contact Info
+--------------------------------------------*/
+footer {
+    background-color: #000;
+    color: #f7fff7;
+    text-align: center;
+}
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+   
+}
+.contact-list a {
+    padding: 15;
+    margin-left: 20px;
+    display: inline-block;
+}
+/*Responsive
+--------------------------------------------*/
+@media screen and (min-width:750px) {
+    header,footer {
+        text-align: center;
+    }
+    .projects-item img {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .contact-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .contact-list a {
+        padding: 8px;
+        display: inline-block;
+        /*justify-content: center;*/
+    }
+}
+@media screen and (max-width:749px) {
+    h1 {
+        font-size: 14px;
+    }
+    h2 {
+        line-height: 1;
+    }
+}
